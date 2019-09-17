@@ -29,9 +29,13 @@ Project Goals:
 
 We are team of 5 enthusiastic Computer science students we are working towards improving our skills in the field of data science.   
 
-Team Members: lavanyagoluguri, AnushaVanama , hlreicha , hvvo , J-cuong 
+Team Members: 
+
+Lavanya Goluguri
+Anusha Vanama
+Jackie Cuong
+Hieu Vo
+Henry Reichard
 
 Instructor: Dr. Somya Mohanty.
 Adviser: Nick Young.
-
-Needs to be updated
