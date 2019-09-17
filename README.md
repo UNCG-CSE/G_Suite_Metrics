@@ -27,7 +27,11 @@ Project Goals:
 
 4.	Visualization / simple dashboard development from the findings using Google Data Studio 
 
+We are team of 5 enthusiastic Computer science students we are working towards improving our skills in the field of data science.   
 
-Team and member description with links to individual accounts
+Team Members: lavanyagoluguri, AnushaVanama , hlreicha , hvvo , J-cuong 
+
+Instructor: Dr. Somya Mohanty.
+Adviser: Nick Young.
 
 Needs to be updated
