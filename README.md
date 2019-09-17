@@ -31,16 +31,11 @@ We are team of 5 enthusiastic Computer science students we are working towards i
 
 Team Members: 
 
-•	Lavanya Goluguri - @Lavanyagoluguri
-
-•	Anusha Vanama - @AnushaVanama
-
-•	Jackie Cuong - @hlreicha
-
-•	Hieu Vo - @hvvo
-
-•	Henry Reichard - @J-cuong
+•	Lavanya Goluguri 
+•	Anusha Vanama 
+•	Jackie Cuong 
+•	Hieu Vo 
+•	Henry Reichard
 
 •	Instructor: Dr. Somya Mohanty.
-
 •	Advisor: Nick Young.
