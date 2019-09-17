@@ -31,11 +31,16 @@ We are team of 5 enthusiastic Computer science students we are working towards i
 
 Team Members: 
 
-•	Lavanya Goluguri 
-•	Anusha Vanama 
-•	Jackie Cuong 
-•	Hieu Vo 
-•	Henry Reichard
+•	Lavanya Goluguri - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_lavanyagoluguri
 
-•	Instructor: Dr. Somya Mohanty.
-•	Advisor: Nick Young.
+•	Anusha Vanama - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_AnushaVanama
+
+•	Jackie Cuong - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_JackieCuong
+
+•	Hieu Vo - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_Hieu
+
+•	Henry Reichard - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_Henry
+
+•	Instructor: Dr. Somya Mohanty
+
+•	Advisor: Nick Young
