@@ -29,6 +29,10 @@ Project Goals:
 
 We are team of 5 enthusiastic Computer science students we are working towards improving our skills in the field of data science.   
 
+Team Name:
+
+OG_Suites
+
 Team Members: 
 
 •	Lavanya Goluguri - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_lavanyagoluguri
