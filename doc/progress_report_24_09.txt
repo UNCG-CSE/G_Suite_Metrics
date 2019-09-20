@@ -1,3 +1,6 @@
+                                                      G_SUITE METRICS
+                                                      
+
 Introduction to the project:
 
 G Suite is a set of cloud computing, productivity and collaboration tools, software and products developed by Google. 
