@@ -1,3 +1,6 @@
+                                                      G_SUITE METRICS
+                                                      
+
 Introduction to the project:
 
 G Suite is a set of cloud computing, productivity and collaboration tools, software and products developed by Google. 
@@ -8,12 +11,12 @@ Currently, Source Data for Google (G Suite) report metrics is pulled automatical
 Data Description
 
 Below are the details of Data Set which we are using for this project
-• Size: 611,914 rows and 649 metric names.
-• Date Range: March 23rd, 2015 to August 17th, 2019
-• Fields: time, metric_name, metric_value
+â€¢ Size: 611,914 rows and 649 metric names.
+â€¢ Date Range: March 23rd, 2015 to August 17th, 2019
+â€¢ Fields: time, metric_name, metric_value
 Time	- The day for which the data is collected. (format: yy-mm-dd hr:min:sec:msec)
-Metric_Name - it is name of the  google service used with their parameter. 
-Metric_Value  - It is no. of. users the metric has on that day. 
+Metric_Name  - it is name of the  google service used with their parameter. 
+Metric_Value  - It is a numeric value related to metric parameter, it can be no. of users the metric has on that day, no.of devices that the used the metric parameter, no. of. documents or it can be a size in mb. 
 
 Goals
 
@@ -25,9 +28,8 @@ Visualization / simple dashboard development from the findings using Google Data
 
 OUTLINED TASKS:
 
-Task Description(Lavanya Goluguri): My task is to clean the data further and to analyze the data trends in the number of users and the metrics over period of months, 
-In short Month by Month analysis on data. This allow me to identify the anomalies and predict trends. Helps in visualization as well.
-Progress towards the task:
+Task Description(Lavanya Goluguri): My task is to clean the data further and to analyze the data trends in the number of users and the metrics over period of months, In short it is Month by Month analysis on data. This allow me to identify the anomalies and predict trends. Helps in visualization as well.
+Progress towards the task: Currently I am working on analysing the data, cleaning it to make it better for my month by month analysis.
 
 Task Description(Anusha Vanama): Year wise data analysis and Data cleaning. Some of the tasks include finding the anomalies in metric values and Predicting the usage of
 a particular metric name based on the past usage, finding newly added and deleted metric names and making visualizations from all the findings.
