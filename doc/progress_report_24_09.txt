@@ -15,8 +15,8 @@ Below are the details of Data Set which we are using for this project
 • Date Range: March 23rd, 2015 to August 17th, 2019
 • Fields: time, metric_name, metric_value
 Time	- The day for which the data is collected. (format: yy-mm-dd hr:min:sec:msec)
-Metric_Name - it is name of the  google service used with their parameter. 
-Metric_Value  - It is no. of. users the metric has on that day. 
+Metric_Name  - it is name of the  google service used with their parameter. 
+Metric_Value  - It is a numeric value related to metric parameter, it can be no. of users the metric has on that day, no.of devices that the used the metric parameter, no. of. documents or it can be a size in mb. 
 
 Goals
 
