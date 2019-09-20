@@ -1,0 +1,46 @@
+Introduction to the project:
+
+G Suite is a set of cloud computing, productivity and collaboration tools, software and products developed by Google. 
+G Suite comprises Gmail, Drive, Docs, Calendar, Hangouts Chat, Hangouts Meet, Mobile, Voice, Slides, Sites, Sheets, Keep and Tasks, 
+Groups, Google+, Forms, Contacts, Cloud Search, Chrome Browser. 
+Currently, Source Data for Google (G Suite) report metrics is pulled automatically into Splunk from Google on daily basis.
+
+Data Description
+
+Below are the details of Data Set which we are using for this project
+• Size: 611,914 rows and 649 metric names.
+• Date Range: March 23rd, 2015 to August 17th, 2019
+• Fields: time, metric_name, metric_value
+Time	- The day for which the data is collected. (format: yy-mm-dd hr:min:sec:msec)
+Metric_Name - it is name of the  google service used with their parameter. 
+Metric_Value  - It is no. of. users the metric has on that day. 
+
+Goals
+
+Performing Analysis on the data set.
+Finding Anomalies by comparing the values in the data set using timestamp, metric_name and metric_value.
+Prediction of future metric value based on the current data set values.
+Visualization / simple dashboard development from the findings using Google Data Studio
+
+
+OUTLINED TASKS:
+
+Task Description(Lavanya Goluguri): My task is to clean the data further and to analyze the data trends in the number of users and the metrics over period of months, 
+In short Month by Month analysis on data. This allow me to identify the anomalies and predict trends. Helps in visualization as well.
+Progress towards the task:
+
+Task Description(Anusha Vanama): Year wise data analysis and Data cleaning. Some of the tasks include finding the anomalies in metric values and Predicting the usage of
+a particular metric name based on the past usage, finding newly added and deleted metric names and making visualizations from all the findings.
+Progress towards the task: Currently I am working on data analysis, data cleaning and performing basic data statistics.
+
+Task Description(Jackie Cuong):
+Progress towards the task:
+
+Task Description(Henry Reichard):
+Progress towards the task:
+
+Task Description(Hieu Vo):
+Progress towards the task:
+
+
+
