@@ -38,8 +38,9 @@ Progress towards the task: Currently I am working on data analysis, data cleanin
 Task Description(Jackie Cuong):
 Progress towards the task:
 
-Task Description(Henry Reichard):
-Progress towards the task:
+Task Description(Henry Reichard): My task is to data clean as well and to analyze the data in a semester by semester analysis.
+Progress towards the task:Currently I am cleaning the data set and removing attributes to services that does not exist anymore or attributes that is all 0s or mostly 0s. 
+I also seperated the data into fall and spring semesters and perform basic stats and analysis on the fall2015 dataset.
 
 Task Description(Hieu Vo):
 Progress towards the task:
