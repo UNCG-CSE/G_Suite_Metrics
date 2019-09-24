@@ -35,8 +35,8 @@ Task Description(Anusha Vanama): Year wise data analysis and Data cleaning. Some
 a particular metric name based on the past usage, finding newly added and deleted metric names and making visualizations from all the findings.
 Progress towards the task: Currently I am working on data analysis, data cleaning and performing basic data statistics.
 
-Task Description(Jackie Cuong):
-Progress towards the task:
+Task Description(Jackie Cuong): My task is to do week by week analysis in order to satisfy the project goals such as finding anomalies and graphic visualizations, while also searching for other creative ways to interpret and transform the data. 
+Progress towards the task: Currently I have sorted out all the data by weeks and am preparing to perform additional analysis
 
 Task Description(Henry Reichard): My task is to data clean as well and to analyze the data in a semester by semester analysis.
 Progress towards the task:Currently I am cleaning the data set and removing attributes to services that does not exist anymore or attributes that is all 0s or mostly 0s. 
