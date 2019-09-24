@@ -42,8 +42,8 @@ Task Description(Henry Reichard): My task is to data clean as well and to analyz
 Progress towards the task:Currently I am cleaning the data set and removing attributes to services that does not exist anymore or attributes that is all 0s or mostly 0s. 
 I also seperated the data into fall and spring semesters and perform basic stats and analysis on the fall2015 dataset.
 
-Task Description(Hieu Vo):
-Progress towards the task:
+Task Description(Hieu Vo): My task is to clean up, analyze and mine information from day-by-day data. I cleaned up and selected only the matric that deals with day-by-day data.
+I created a function that takes matric name, year and month to create bar-graph and line-graph. This helps me and my team to recognize patterns of a particular matric_name and make predictions about it. I also did a 5-number summary on the data to have an overall look of the data. My next goal is to find correlation and relationship between this matric name.
 
 
 
