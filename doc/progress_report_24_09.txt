@@ -28,7 +28,10 @@ Visualization / simple dashboard development from the findings using Google Data
 
 OUTLINED TASKS:
 
-Task Description(Lavanya Goluguri): My task is to first break down the data based on the G-suite metrics. I want to focus primarly on the major Gsuite services: Gmail, Calendar, Google forms, Drive, Cloud and Hangout. I will create seperate data sets for a each service. sA the metric_value in orginal data set is heterogeneous data it contains a variety of parameters like number of users, size of data shared in mb, number of docs shared, no of devices connected, etc. which makes it hard to perform data analysis on the dataset unless we make the dataset with homogeneous data columns.  
+Task Description(Lavanya Goluguri): My task is to first break down the data based on the G-suite metrics.
+I want to focus primarly on the major Gsuite services: Gmail, Calendar, Google forms, Drive, Cloud and Hangout. 
+I will create seperate data sets for a each service. As the metric_value in orginal data set is heterogeneous data it contains a variety of parameters like number of users, size of data shared in mb, number of docs shared, no of devices connected, etc.
+which makes it hard to perform data analysis on the dataset unless we make the dataset with homogeneous data columns.  
 Progress towards the task: Currently I am working on initial data analysis and cleaning.
 
 Task Description(Anusha Vanama): Year wise data analysis and Data cleaning. Some of the tasks include finding the anomalies in metric values and Predicting the usage of
