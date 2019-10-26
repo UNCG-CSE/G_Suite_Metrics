@@ -2,11 +2,14 @@
 
 Based on the complexity of the G-suite metrics daata set, all our team members have divided the g-suite metrics(Drive, Gmail, Meet,  among us and each of us stated working on them.
 
-Google Drive:
+- Google Drive:
 
 I have separated the drive realted data from the original gsuite metrics, and created a new data frame that is fexible to query on parameters, cleaned that data, dropped the rows that has all nan values, replaced the remaining nan values with the mean of the columns.
 As per the suggestions from the mentor I focused more on the 1day active users and 30 day active users for the google drive,forms created and edited, documents created and edited as those point to how much content is being created, and how much is being actually collaborated/updated after creation.
 
-R1 : Coming to statistics part of the drive data the size of the data is 831 rows X 144 columns, the data is collected from 03/2017 to 08/2019. I have focused on 1day_active_users, 30day_active_users and google_forms_created, google_forms_edited. I did the basic statistics on these parameters like mean, variance, distributions modelling, Maximum likelihood , kernel density estimators on the distributions, point estimates, correlation and covariance among parameters and Hypothesis testing on the above stated parameters to see if the null hypothesis is considered or the alternate hypothesis is considered. [https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/lavanya](https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/lavanya).
+R1 : Coming to statistics part of the drive data the size of the data is 831 rows X 144 columns, the data is collected from 03/2017 to 08/2019. 
+I have focused on 1day_active_users, 30day_active_users and google_forms_created, google_forms_edited. 
+I did the basic statistics on these parameters like mean, variance, distributions modelling, Maximum likelihood , kernel density estimators on the distributions, point estimates, correlation and covariance among parameters and Hypothesis testing on the above stated parameters to see if the null hypothesis is considered or the alternate hypothesis is considered.
+[Github links](https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/lavanya).
 
 R2: 
