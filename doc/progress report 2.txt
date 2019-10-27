@@ -34,3 +34,35 @@ I have calculated the confidence intervals, t- critial and z- critical values.
 I formed the hypothesis tha the mean of the 1day active users is significantly different from the mean of 30 day active users,
 I did the one sample ttest, two sample ttest independent and the relative testing. 
 The p value is 0.32, which is >0.05 means we fail to reject the null hypothesis. 
+
+Google Meet:(Anusha Vanama)
+
+Our mentor suggested me to mainly focus on below 6 metrics under Google Meet.
+
+google.meet:total_call_minutes 
+google.meet:num_30day_active_users
+google.meet:num_meetings
+google.meet:num_calls
+google.meet:average_meeting_minutes
+google.meet:total_meeting_minutes
+
+Currently, I had completed Basic Data Exploration on google.meet:total_call_minutes. 
+I am going to perform metrics for remaining metrics as well following the same procedure.
+
+R1 Work done towards the tasks with links to notebooks
+
+Task 1: Extraction of Google Meet data
+Task 2: Statistical evaluation of data
+Task 3: Distribution Modeling
+Task 4: Finding Correlation and Co-variance within the data
+Task 5: Point Estimates
+Task 6: Hypothesis testing
+
+Below is the github link for all the above tasks
+https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Anusha
+
+R2 Number of hours spent on each task.
+Needs to be updated
+
+R3 Description of the results obtained from the tasks. (4-5 lines for each task)
+Needs to be updated
