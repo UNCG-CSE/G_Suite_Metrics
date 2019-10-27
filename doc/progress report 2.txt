@@ -1,11 +1,14 @@
                                                          G_SUITE METRICS
 
-Based on the complexity of the G-suite metrics daata set, all our team members have divided the g-suite metrics(Drive, Gmail, Meet,  among us and each of us stated working on them.
+Based on the complexity of the G-suite metrics data set, all our team members have divided the g-suite metrics
+(Drive, Gmail, Meet, Calendar, Accounts) and each of us stated working on them.
 
 - Google Drive:(Lavanya Goluguri)
 
-I have separated the drive realted data from the original gsuite metrics, and created a new data frame that is fexible to query on parameters, cleaned that data, dropped the rows that has all nan values, replaced the remaining nan values with the mean of the columns.
-As per the suggestions from the mentor I focused more on the 1day active users and 30 day active users for the google drive,forms created and edited, documents created and edited. 
+I have separated the drive realted data from the original gsuite metrics, and created a new data frame that is fexible to query on parameters.
+cleaned that data, dropped the rows that has all nan values, replaced the remaining nan values with the mean of the columns.
+As per the suggestions from the mentor I focused more on the 1day active users and 30 day active users.
+Also google forms created and edited, google documents created and edited. 
 As those point to how much content is being created, and how much is being actually collaborated/updated after creation.
 
 R1 : Coming to statistics part of the drive data the size of the data is now 831 rows X 144 columns, 
@@ -24,8 +27,10 @@ In the Inter quartile range there are around 3300 to 4300 1day and 30day active 
 Both the 1day_active_users and 30day_active_users data is discrete so that distribution fit for both is poisson distribution. 
 The estimators I used is the kernel density estimator to check my distribution modelling. 
 In the point estimates , 
-I have taken samples from the 1day and 30 day active users and used the Central limit theorem to plot the mean of the samples, which is a normal distribution.
+I have taken samples from the 1day and 30 day active users and used the Central limit theorem to plot the mean of the samples,
+which is a normal distribution.
 I checked the covariance and correlation of the two parameters, it is 0.45, means they are not highly correlated.
 I have calculated the confidence intervals, t- critial and z- critical values.
-I formed the hypothesis tha the mean of the 1day active users is significantly different from the mean of 30 day active users, did the one sample ttest, two sample ttest independent and the relative testing. 
+I formed the hypothesis tha the mean of the 1day active users is significantly different from the mean of 30 day active users,
+I did the one sample ttest, two sample ttest independent and the relative testing. 
 The p value is 0.32, which is >0.05 means we fail to reject the null hypothesis. 
