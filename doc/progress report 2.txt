@@ -51,9 +51,15 @@ I am going to perform metrics for remaining metrics as well following the same p
 
 R1 Work done towards the tasks with links to notebooks
 
-Task 1: Extraction of Google Meet data
-Task 2: Statistical evaluation of data
+Task 1: Extraction of Google Meet data and statistical evaluation
+Extracted Google Meet related metrics from the G suite Metrics data set and stored in a new data frame. 
+Performed Initial analysis on Google Meet data. 
+Task 2: Statistical evaluation of Total Call Minutes metric of Google Meet
+Performed initial analysis on Google Meet dataset. Selected total call minutes metric from the top 6 Google Meet metrics as suggested by our mentor
+and performed further analysis. Calculated Mean, Mode, Variance, Standard deviation, Interquartile (IQR) range and all basic statistics for total call minutes metric.
 Task 3: Distribution Modeling
+Plotted Total Call Minutes data using Histograms to observe what sort of distribution will fit my data.
+Kernel Density Estimation is used to find probability density function (PDF) for Total Call Minutes data.
 Task 4: Finding Correlation and Co-variance within the data
 Task 5: Point Estimates
 Task 6: Hypothesis testing
@@ -65,4 +71,19 @@ R2 Number of hours spent on each task.
 Needs to be updated
 
 R3 Description of the results obtained from the tasks. (4-5 lines for each task)
-Needs to be updated
+Results for Task 1: Extraction of Google Meet data and statistical evaluation
+There are 55 unique metric names, 29434 observations under Google Meet recorded from January 14th, 2018 to August 17th, 2019.
+There are 17731 observations in 2018 and 11703 in 2019.
+Some of the Metric Values of Google Meet includes Number of users, Number of Minutes, Number of Meetings, Number of Calls, 
+Usage of Chromebox and Usage of Chromebase. 
+We have same metric names in both years and there are no new metrics added in 2019.
+
+
+Results for Task 2: Statistical evaluation of Total Call Minutes metric of Google Meet
+There are 543 observations under Total Call Minutes metric of Google Meet. There are 328 observations in 2018 and 215 in 2019.
+The Metric Value here is Number of total call minutes which are extracted on daily basis. Metric value is 0 for 155 days.
+Maximum number of total_call_minutes is 7623 minutes recorded on 2019-07-01.
+Median of metric values is 782 and Mean value is 1152.29 which is far away from median as we have extreme values for total call minutes for few days. 
+Eg: There are 7623 minutes on 2019-07-01. Interquartile (IQR) range value is 1861 minutes.
+Variance and Standard Deviation are not the right measures of spread as the data is having extreme values.
+Median absolute deviation is the right measure of spread for TotalCallMinutes metric which is around 1159.4 minutes.
