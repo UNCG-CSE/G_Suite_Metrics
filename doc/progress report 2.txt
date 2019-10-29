@@ -61,16 +61,22 @@ Task 3: Distribution Modeling
 Plotted Total Call Minutes data using Histograms to observe what sort of distribution will fit my data.
 Kernel Density Estimation is used to find probability density function (PDF) for Total Call Minutes data.
 Task 4: Finding Correlation and Co-variance within the data
+Our mentor is interested in the comparison of the types of devices (ios/android etc). I tried finding Correlation between total_call_minutes_ios, total_call_minutes_android, total_call_minutes
 Task 5: Point Estimates
+Point estimates are used to estimate the mean of total call minutes of all days. Total Call Minutes data follows exponential distribution.
+Used Central Limit Theorem by taking the distribution of many sample means. Calculated confidence intervals and z-critical values.
 Task 6: Hypothesis testing
+Tested whether the average of total call minutes for Google Meet in the year 2019 differs from the year 2018 
+Null Hypothesis (H0) Average of total Call Minutes of Google Meet in year 2019 is same as in year 2018 
+Alternate hypothesis (H1) Average of total Call Minutes of Google Meet in year 2019 is different from year 2018
 
 Below is the github link for all the above tasks
 https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Anusha
 
 R2 Number of hours spent on each task.
-Needs to be updated
+I did not calculate exact time, but I used to spend around 1-2 hours everyday for this project.
 
-R3 Description of the results obtained from the tasks. (4-5 lines for each task)
+R3 Description of the results obtained from the tasks
 Results for Task 1: Extraction of Google Meet data and statistical evaluation
 There are 55 unique metric names, 29434 observations under Google Meet recorded from January 14th, 2018 to August 17th, 2019.
 There are 17731 observations in 2018 and 11703 in 2019.
@@ -87,3 +93,29 @@ Median of metric values is 782 and Mean value is 1152.29 which is far away from 
 Eg: There are 7623 minutes on 2019-07-01. Interquartile (IQR) range value is 1861 minutes.
 Variance and Standard Deviation are not the right measures of spread as the data is having extreme values.
 Median absolute deviation is the right measure of spread for TotalCallMinutes metric which is around 1159.4 minutes.
+
+Results for Task 3: Distribution Modeling
+Total call minutes comes under continuous data.
+It follows the exponential distribution, the exponential started high and it has a long tail that trails off to the right 
+
+Results for Task 4: Finding Correlation and Co-variance within the data
+Correlation of Android and iOS: 0.08
+Correlation of Android and Total: 0.23
+Correlation of iOS and Total: 0.51
+The closer to 0 the correlation coefficient is, the weaker the relationship between the variables. 
+Here, there is weaker relationship between Android and iOS usage of google meet.
+There is better relationship between Total usage and iOS usage of google meet.
+Observed that the Android usage of google meet is less when compared to iOS usage of google meet.
+
+Results for Task 5: Point Estimates
+Point estimate based on a sample of 400 observations overestimated the true call minutes mean by 22.560137 minutes.
+The distribution has high skewness, and the plot revealed the data is clearly not normal. The sample drawn from this data is also having same shape.
+Created a sampling distribution by taking 300 samples from our call minutes data and then making 300 point estimates of the mean.
+The sampling distribution appeared to be normal after applying Central Limit Theorem.
+In addition, the mean of the sampling distribution approached the true mean, there is only a difference of 3 minutes.
+Calculated 95% confidence for the mean point estimate and noticed that the calculated confidence interval is very close the true call minutes mean of 1148.051565
+24 out of 25 samples of the 95% confidence intervals overlapped the red line marking the true mean.
+
+Results for Task 6: Hypothesis testing
+Observed that pvalue is greater than 0.05. Since the p-value is greater than the corresponding significance level of 5%( 𝛼<0.05 ). 
+So, we failed to reject the null hypothesis that Average of total Call Minutes of Google Meet in year 2019 is same as in year 2018 using a 95% confidence level.
