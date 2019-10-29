@@ -66,7 +66,8 @@ Task 5: Point Estimates
 Point estimates are used to estimate the mean of total call minutes of all days. Total Call Minutes data follows exponential distribution.
 Used Central Limit Theorem by taking the distribution of many sample means. Calculated confidence intervals and z-critical values.
 Task 6: Hypothesis testing
-
+Tested whether the mean of total call minutes for Google Meet in the year 2019 differs from the year 2018 
+Tested whether the Mean of number of meetings in google meet is similar to the Mean of number of meetings in google meet using iOS or Android 
 Below is the github link for all the above tasks
 https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Anusha
 
@@ -114,3 +115,6 @@ Calculated 95% confidence for the mean point estimate and noticed that the calcu
 24 out of 25 samples of the 95% confidence intervals overlapped the red line marking the true mean.
 
 Results for Task 6: Hypothesis testing
+In all the cases, Null hypothesis is that the means of both groups are the same. Alternate Hypothesis is that the mean is different.
+For all scenarios, p value is less than 0.05 which means that we reject the null hypothesis. 
+Observation is that the Mean of total Call Minutes of Google Meet in year 2019 is different from year 2018 and The Mean of number of meetings in google meet is different from Mean of number of meetings in google meet using iOS as well as Android
