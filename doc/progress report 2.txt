@@ -47,8 +47,9 @@ google.meet:num_calls
 google.meet:average_meeting_minutes
 google.meet:total_meeting_minutes
 
-Currently, I had completed Basic Data Exploration on google.meet:total_call_minutes. 
-I am going to perform metrics for remaining metrics as well following the same procedure.
+As it will be too long to document the results of all metrics here, I had documented results of only 1 metric "google.meet:total_call_minutes".
+But I had documented the results of above 6 metrics using markdown which can be referred in below github link
+https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Anusha
 
 R1 Work done towards the tasks with links to notebooks
 
@@ -56,8 +57,7 @@ Task 1: Extraction of Google Meet data and statistical evaluation
 Extracted Google Meet related metrics from the G suite Metrics data set and stored in a new data frame. 
 Performed Initial analysis on Google Meet data. 
 Task 2: Statistical evaluation of Total Call Minutes metric of Google Meet
-Performed initial analysis on Google Meet dataset. Selected total call minutes metric from the top 6 Google Meet metrics as suggested by our mentor
-and performed further analysis. Calculated Mean, Mode, Variance, Standard deviation, Interquartile (IQR) range and all basic statistics for total call minutes metric.
+Calculated Mean, Mode, Variance, Standard deviation, Interquartile (IQR) range and all basic statistics for total call minutes metric.
 Task 3: Distribution Modeling
 Plotted Total Call Minutes data using Histograms to observe what sort of distribution will fit my data.
 Kernel Density Estimation is used to find probability density function (PDF) for Total Call Minutes data.
@@ -68,7 +68,7 @@ Point estimates are used to estimate the mean of total call minutes of all days.
 Used Central Limit Theorem by taking the distribution of many sample means. Calculated confidence intervals and z-critical values.
 Task 6: Hypothesis testing
 Tested whether the mean of total call minutes for Google Meet in the year 2019 differs from the year 2018 
-Tested whether the Mean of number of meetings in google meet is similar to the Mean of number of meetings in google meet using iOS or Android 
+Tested whether the Mean of number of meetings in google meet is similar to the Mean of number of meetings in google meet using iOS or Android. Used Two-Sample T-test as comparison is between means of two independent data samples for all the scenarios
 Below is the github link for all the above tasks
 https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Anusha
 
@@ -88,9 +88,10 @@ Results for Task 2: Statistical evaluation of Total Call Minutes metric of Googl
 There are 543 observations under Total Call Minutes metric of Google Meet. There are 328 observations in 2018 and 215 in 2019.
 The Metric Value here is Number of total call minutes which are extracted on daily basis. Metric value is 0 for 155 days.
 Maximum number of total_call_minutes is 7623 minutes recorded on 2019-07-01.
-Median of metric values is 782 and Mean value is 1152.29 which is far away from median as we have extreme values for total call minutes for few days. 
+Median of metric values is 782 and Mean value is 1152.29 which is higher than median as we have 
+Maximum Outliers for total call minutes for few days in both 2018 and 2019. 
 Eg: There are 7623 minutes on 2019-07-01. Interquartile (IQR) range value is 1861 minutes.
-Variance and Standard Deviation are not the right measures of spread as the data is having extreme values.
+Variance and Standard Deviation are not the right measures of spread as the data is having maximum outlier values.
 Median absolute deviation is the right measure of spread for TotalCallMinutes metric which is around 1159.4 minutes.
 
 Results for Task 3: Distribution Modeling
@@ -103,7 +104,7 @@ Correlation of Android and Total: 0.23
 Correlation of iOS and Total: 0.51
 The closer to 0 the correlation coefficient is, the weaker the relationship between the variables. 
 Here, there is weaker relationship between Android and iOS usage of google meet.
-There is better relationship between Total usage and iOS usage of google meet.
+There is better relationship between Total usage and iOS usage of google meet when compared to the relationship between Total Usage and Android Usage.
 Observed that the Android usage of google meet is less when compared to iOS usage of google meet.
 
 Results for Task 5: Point Estimates
