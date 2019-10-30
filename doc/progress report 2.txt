@@ -119,3 +119,12 @@ Results for Task 6: Hypothesis testing
 In all the cases, Null hypothesis is that the means of both groups are the same. Alternate Hypothesis is that the mean is different.
 For all scenarios, p value is less than 0.05 which means that we reject the null hypothesis. 
 Observation is that the Mean of total Call Minutes of Google Meet in year 2019 is different from year 2018 and The Mean of number of meetings in google meet is different from Mean of number of meetings in google meet using iOS as well as Android
+
+
+Google Calendar (Jackie Cuong):
+
+R1: My task was the google calendar analysis.  I have done all the basic data exploration for google calendar, as well as point estimates, visualizing the data with graphs, placing the data in  histograms, splitting the data into weeks, months, years, and testing my hypothesis of whether the third week of the month was significantly different in number of users for google calendar compared to the rest of the weeks.
+
+R2:  I spent around an average of 3 hours per week on the task, some parts of the task requiring more time than others, such as distribution of the data which took at least 3 hours by itself while basic data exploration could have taken around 30 minutes.
+
+R3:  For my results I have noticed found that the data is spread out generally evenly, and when visualized with a histogram I noticed that the distribution is bimodal, this leads me to believe that largest peak is for spring/fall classes which has a higher attendance of students, and the smaller peak is for summer/winter semesters where there is a lower rate of students attending classes.  For my hypothesis I compared the third week of the month to the average of all the weeks combined,  using a formula the p-value that came out was -1.4. which is enough to conclude that there was a significant difference in the third week of the month compared to the rest.  The basic data exploration showed the data had a very large outlier at 10,000 but the rest of the data shows trends at 500-3,600.  Deciding to forgo the outlier the mean for the data came to be 1643 users daily and a standard deviation of 685.
