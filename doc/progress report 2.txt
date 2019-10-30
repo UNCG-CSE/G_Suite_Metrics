@@ -129,3 +129,79 @@ R1: My task was the google calendar analysis.  I have done all the basic data ex
 R2:  I spent around an average of 3 hours per week on the task, some parts of the task requiring more time than others, such as distribution of the data which took at least 3 hours by itself while basic data exploration could have taken around 30 minutes.
 
 R3:  For my results I have noticed found that the data is spread out generally evenly, and when visualized with a histogram I noticed that the distribution is bimodal, this leads me to believe that largest peak is for spring/fall classes which has a higher attendance of students, and the smaller peak is for summer/winter semesters where there is a lower rate of students attending classes.  For my hypothesis I compared the third week of the month to the average of all the weeks combined,  using a formula the p-value that came out was -1.4. which is enough to conclude that there was a significant difference in the third week of the month compared to the rest.  The basic data exploration showed the data had a very large outlier at 10,000 but the rest of the data shows trends at 500-3,600.  Deciding to forgo the outlier the mean for the data came to be 1643 users daily and a standard deviation of 685.
+
+- Gmail:(Henry Reichard)
+
+Our mentor suggested me to mainly focus on below 5 metrics under Gmail.
+
+num_emails_received
+num_emails_sent
+num_inbound_rejected_emails
+num_inbound_spam_emails
+num_inbound_non_spam_emails
+
+R1 : 
+Task 1: Extraction of Google Email data and  data cleaning
+Task 2: Statistical Evaluation
+Task 3: Distribution Modeling
+Task 4: Point Estimates
+Task 5: Finding Correlation and Co-variance within the data
+Task 6: Hypothesis testing
+Below is the github link for all the above tasks
+https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Henry
+
+
+
+Coming to statistics part of the drive data the size of the data is now 1545 rows X 28 columns, 
+the data is collected from 03-23-2015 to 08-19-2019. 
+While I have focused on the metrics my mentor suggest I should look at, I also went ahead and look at other metrics that might be interesting as well.
+I did the basic statistics on these parameters like mean, variance, distributions modelling, Maximum likelihood , 
+kernel density estimators on the distributions, point estimates, correlation and covariance among parameters and 
+Hypothesis testing on the above stated parameters to see if the null hypothesis is considered or 
+the alternate hypothesis is considered.
+
+R2: Time I spent on these task: A lot, usually couple hours on the weekends before work, and couple hours on Mondays and Wednesdays after 11AM has been dedicated to my task
+
+R3: Description of the results obtained from the tasks
+Results for Task 1:
+I have separated the gmail related data from the original dataset, and created a new data frame and csv file so I can preform data analysis on my service.
+I cleaned the data by dropping nan value rows and dropping 0 value rows that occurs when G-Suites are down for maintenence. Luckily the number of dropped rows
+were marginal so it did not effect the data that much. Also the data is relatively clean so I didn't have to do anymore data cleaning. 
+I also move all unique attributes from the rows to be there own columns, so now I have a dataframe with 28 columns and 1545 rows. Each row represents a new day from
+3-23-2015 through 08-19-2019. I set the row column as index and passed it through pd.datetime. Now it is easy for me to plot and index the data.
+Results for Task 2: 
+Doing this task is relatively easy, df.describe will give you the basic statistics immediatly. I did this call for the overall gmail data and the 5 attributes my mentor wants
+me to focus on.
+Mean: emails received =280777, emails sent = 27640, inbound rejected emails = 16359, inbound spam emails = 44881, inbound non spam emails = 162224
+and the mean for inbound non-spam emails are 162224.
+Max: emails received = 648823, emails sent = 56768, inbound rejected emails = 144169, inbound spam emails = 127402, inbound nonspam emails = 442820
+Min: emails received = 74919, emails sent = 1181, inbound rejected emails = 0, inbound spam emails = 9578, inbound nonspam emails = 50814
+Variance: emails received = 1.323908e+10, emails sent = 2.538946e+08, inbound rejected emails = 3.410658e+08, inbound spam emails = 4.104442e+08, inbound nonspam emails = 3.070721e+09
+
+Count: 1544 for all of them.
+Results for Task 3:
+The five attributes are discrete and  the distribution fit is poisson distribution because it shows how many  times an event likely to occur over specific time. 
+The estimators I used is the kernel density estimator to check my distribution modelling and Maximum Likely Estimator using continous distributions to find the best fit for
+the data. I ran a kstests to to find which estimator has the better fit. I also went ahead and did this for 7 more attributes.
+Results for Task 4:
+For the point estimates, I have taken samples from emails_received and used central limit theorem to show the samples look normal and the 
+mean is much closer to the actual mean. I have calculated the confidence level for emails received and the sample means falls within the confidence level.
+I have also calculated the confidence intervals for the  z- critical values on 11 other attributes as well.
+Results for Task 5:
+I checked the covariance and correlation of the 5 parameters: 
+Emails received and emails sent correlation: .95
+Emails receive and inbound non spam emails correlation: .88
+Emails sent and inbound non spam emails correlation: .83
+These correlations are very strong since it very close to 1, the correlations for the rest of the 5 attributes are not past .50 and thus are weak.
+
+Results for Task 6:
+I formed the hypothesis that the number of the 1day active users is smaller in December when compared to active users for the overall year.
+I preformed a 1 sample t test with 1 day active users in december and mean of 1 day users throughout the year.
+The p value is 1.22800432e-10, which is <0.05 which means we to reject the null hypothesis and it shows the distributions are different. 
+Thus the mean values of the sample mean (dec) and the population mean (odu) are different. Since the mean for december is 14764 and the mean for odu is 17342, and the p value 
+is much less then 0.025 (the probability of finding the data in the tail ends of the distrubition, 0.025 is on the left side with values smaller then the mean) it is concluded that 
+month of december has less active users.
+I also did hypothesis testing emails received and emails and I conducted a 2 sample t-test. pvalue returns 0 when the probability is super small, which means it much less then 0.05 
+so the null hypothesis is rejected. These distributions are different. I did hypothesis testing for inbound emails and inbound spam emails and conducted a 2 sample t -test and
+the p value was super small as well and the null hypothesis is rejected. Finally I did the same hypothesis test I did for 1 day active users for all 5 attributes and I gotten the same
+results, which is amount of email traffic in december is smaller and significantly different compared to the rest of the year.
