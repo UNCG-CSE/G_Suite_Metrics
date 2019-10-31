@@ -150,25 +150,16 @@ Task 6: Hypothesis testing
 Below is the github link for all the above tasks
 https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Henry
 
-
-
-Coming to statistics part of the drive data the size of the data is now 1545 rows X 28 columns, 
-the data is collected from 03-23-2015 to 08-19-2019. 
-While I have focused on the metrics my mentor suggest I should look at, I also went ahead and look at other metrics that might be interesting as well.
-I did the basic statistics on these parameters like mean, variance, distributions modelling, Maximum likelihood , 
-kernel density estimators on the distributions, point estimates, correlation and covariance among parameters and 
-Hypothesis testing on the above stated parameters to see if the null hypothesis is considered or 
-the alternate hypothesis is considered.
-
 R2: Time I spent on these task: A lot, usually couple hours on the weekends before work, and couple hours on Mondays and Wednesdays after 11AM has been dedicated to my task
 
 R3: Description of the results obtained from the tasks
 Results for Task 1:
-I have separated the gmail related data from the original dataset, and created a new data frame and csv file so I can preform data analysis on my service.
+the data is collected from 03-23-2015 to 08-19-2019. I have separated the gmail related data from the original dataset, and created a new data frame and csv file so I can preform data analysis on my service.
 I cleaned the data by dropping nan value rows and dropping 0 value rows that occurs when G-Suites are down for maintenence. Luckily the number of dropped rows
 were marginal so it did not effect the data that much. Also the data is relatively clean so I didn't have to do anymore data cleaning. 
 I also move all unique attributes from the rows to be there own columns, so now I have a dataframe with 28 columns and 1545 rows. Each row represents a new day from
 3-23-2015 through 08-19-2019. I set the row column as index and passed it through pd.datetime. Now it is easy for me to plot and index the data.
+
 Results for Task 2: 
 Doing this task is relatively easy, df.describe will give you the basic statistics immediatly. I did this call for the overall gmail data and the 5 attributes my mentor wants
 me to focus on.
