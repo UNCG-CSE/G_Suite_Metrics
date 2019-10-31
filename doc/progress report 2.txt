@@ -173,8 +173,7 @@ Results for Task 3:
 All the attributes are discrete and the distribution that will work with the data is the poisson distribution because it shows how many  times an event likely to occur over specific time. Since I am analyzing how users are using a service in G-Suites, more specifically gmail, over time it would make sense to use Poisson Distribution.
 The estimators I used is the kernel density estimator to check my distribution modelling  I ran a kstests to see if the estimator is a good fit. 
 Results for Task 4:
-For the point estimates, I have taken samples from emails_received and used central limit theorem to  show how distributions of many sample means are normal and the sample mean is much closer to the actual mean. I have calculated the confidence level for emails received and the sample means falls within the confidence level.
-I have also calculated the confidence intervals for the  z- critical values on 11 other attributes as well.
+For the point estimates, I have taken samples from emails_received and used central limit theorem to show how distributions of many sample means are normal and the sample mean is much closer to the actual mean. I have calculated the confidence level for emails received and the sample means falls within the confidence level. I have also calculated the confidence intervals for the  z- critical values on 11 other attributes as well.
 Results for Task 5:
 I checked the covariance and correlation of the 5 parameters: 
 Emails received and emails sent correlation: .95
