@@ -21,6 +21,8 @@ Google_documents_created
 Google_documents_edited
 Google_presentations_created
 Google_presentations_edited
+Google_Spreadsheets_created
+Google_spreadsheets_edited
 Google_drawings_created
 Google_drawings_edited
 
