@@ -4,7 +4,7 @@ Based on the complexity of the G-suite metrics data set, all our team members ha
 (Drive, Gmail, Meet, Calendar, Accounts) and each of us stated working on them.
 
 - Google Drive:(Lavanya Goluguri):
-Progress Towards Goals:  My main task for this project is to work on the drive data, find its anamolies, patterns, distributions and predictions.
+Progress Towards Goals:  My main task for this project is to work on the drive data, find its anomalies, patterns, distributions and predictions.
 In the work of progress towards this task, I have done the data cleaning and the statistical analysis on the prime parameters of the drive data. To discuss about it in detail my statistical analysis is as stated below. 
 
 I have separated the drive related data from the original gsuite metrics, and created a new data frame that is fexible to query on parameters.cleaned that data, dropped the rows that has all nan values, replaced the remaining nan values with the mean of the columns.
