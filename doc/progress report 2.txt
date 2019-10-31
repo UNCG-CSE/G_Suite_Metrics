@@ -154,11 +154,10 @@ R2: Time I spent on these task: A lot, usually couple hours on the weekends befo
 
 R3: Description of the results obtained from the tasks
 Results for Task 1:
-the data is collected from 03-23-2015 to 08-19-2019. I have separated the gmail related data from the original dataset, and created a new data frame and csv file so I can preform data analysis on my service.
-I cleaned the data by dropping nan value rows and dropping 0 value rows that occurs when G-Suites are down for maintenence. Luckily the number of dropped rows
-were marginal so it did not effect the data that much. Also the data is relatively clean so I didn't have to do anymore data cleaning. 
-I also move all unique attributes from the rows to be there own columns, so now I have a dataframe with 28 columns and 1545 rows. Each row represents a new day from
-3-23-2015 through 08-19-2019. I set the row column as index and passed it through pd.datetime. Now it is easy for me to plot and index the data.
+The data is collected from 03-23-2015 to 08-19-2019. I have separated the gmail related data from the original dataset, and created a new data frame and csv file so I can preform data analysis on my service. I moved all unique attributes from the rows to be there own columns, so now I have a dataframe with 28 columns and 1545 rows. Each row represents a new day from
+3-23-2015 through 08-19-2019. I set the row column as index and passed it through pd.datetime. Now it is easy to plot and index the data.
+
+I cleaned the data by dropping nan value rows and dropping 0 value rows that occurs when G-Suites are down. Luckily the number of dropped rows were marginal, around 50 rows, so it did not affect the data that much. The data is relatively clean so I didn't have to do further data cleaning. 
 
 Results for Task 2: 
 Doing this task is relatively easy, df.describe will give you the basic statistics immediatly. I did this call for the overall gmail data and the 5 attributes my mentor wants
@@ -171,28 +170,26 @@ Variance: emails received = 1.323908e+10, emails sent = 2.538946e+08, inbound re
 
 Count: 1544 for all of them.
 Results for Task 3:
-The five attributes are discrete and  the distribution fit is poisson distribution because it shows how many  times an event likely to occur over specific time. 
-The estimators I used is the kernel density estimator to check my distribution modelling and Maximum Likely Estimator using continous distributions to find the best fit for
-the data. I ran a kstests to to find which estimator has the better fit. I also went ahead and did this for 7 more attributes.
+All the attributes are discrete and the distribution that will work with the data is the poisson distribution because it shows how many  times an event likely to occur over specific time. Since I am analyzing how users are using a service in G-Suites, more specifically gmail, over time it would make sense to use Poisson Distribution.
+The estimators I used is the kernel density estimator to check my distribution modelling  I ran a kstests to see if the estimator is a good fit. 
 Results for Task 4:
-For the point estimates, I have taken samples from emails_received and used central limit theorem to show the samples look normal and the 
-mean is much closer to the actual mean. I have calculated the confidence level for emails received and the sample means falls within the confidence level.
+For the point estimates, I have taken samples from emails_received and used central limit theorem to  show how distributions of many sample means are normal and the sample mean is much closer to the actual mean. I have calculated the confidence level for emails received and the sample means falls within the confidence level.
 I have also calculated the confidence intervals for the  z- critical values on 11 other attributes as well.
 Results for Task 5:
 I checked the covariance and correlation of the 5 parameters: 
 Emails received and emails sent correlation: .95
 Emails receive and inbound non spam emails correlation: .88
 Emails sent and inbound non spam emails correlation: .83
-These correlations are very strong since it very close to 1, the correlations for the rest of the 5 attributes are not past .50 and thus are weak.
+These correlations are very strong since it very close to 1, the correlations for the rest of the 5 attributes are less than .50 and thus are weak.
 
 Results for Task 6:
 I formed the hypothesis that the number of the 1day active users is smaller in December when compared to active users for the overall year.
 I preformed a 1 sample t test with 1 day active users in december and mean of 1 day users throughout the year.
 The p value is 1.22800432e-10, which is <0.05 which means we to reject the null hypothesis and it shows the distributions are different. 
 Thus the mean values of the sample mean (dec) and the population mean (odu) are different. Since the mean for december is 14764 and the mean for odu is 17342, and the p value 
-is much less then 0.025 (the probability of finding the data in the tail ends of the distrubition, 0.025 is on the left side with values smaller then the mean) it is concluded that 
+is much less than 0.025 (the probability of finding the data in the tail ends of the distrubition, 0.025 is on the left side with values smaller than the mean) it is concluded that 
 month of december has less active users.
-I also did hypothesis testing emails received and emails and I conducted a 2 sample t-test. pvalue returns 0 when the probability is super small, which means it much less then 0.05 
+I also did hypothesis testing emails received and emails and I conducted a 2 sample t-test. pvalue returns 0 when the probability is super small, which means it much less than 0.05 
 so the null hypothesis is rejected. These distributions are different. I did hypothesis testing for inbound emails and inbound spam emails and conducted a 2 sample t -test and
 the p value was super small as well and the null hypothesis is rejected. Finally I did the same hypothesis test I did for 1 day active users for all 5 attributes and I gotten the same
 results, which is amount of email traffic in december is smaller and significantly different compared to the rest of the year.
