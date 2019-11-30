@@ -7,3 +7,27 @@ What was done to solve for the question?
 Describe outcomes.
 What were the outcomes
 What are their implications
+                                                          G_SUITE METRICS
+                                                          
+- Google Drive:(Lavanya Goluguri):
+My main task for this project is to work on the drive data, find its anomalies, patterns, distributions and predictions.
+In the work of progress towards this task, I have selected the important metrics in the drive data and applied time series analysi on the 
+data. To discuss about it in detail my Machine learning analysis is as stated below.
+
+So, the metrics that are mainly focused on in the drive data are:
+1day_active_users
+30day_active_users
+Google_forms_created
+Google_forms_edited
+Google_documents_created
+Google_documents_edited
+Google_presentations_created
+Google_presentations_edited
+Google_Spreadsheets_created
+Google_spreadsheets_edited
+Google_drawings_created
+Google_drawings_edited
+
+I considered these as those point to how much content is being created, and how much is being actually collaborated/updated after creation.
+
+
