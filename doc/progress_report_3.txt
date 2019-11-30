@@ -29,5 +29,6 @@ Google_drawings_created
 Google_drawings_edited
 
 I considered these as those point to how much content is being created, and how much is being actually collaborated/updated after creation.
+Question asked: The question that I mainly posed on my data, is can I predict the data of 2020 based on my current available data.
 
 
