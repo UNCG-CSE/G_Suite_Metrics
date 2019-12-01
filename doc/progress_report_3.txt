@@ -10,10 +10,10 @@ What are their implications
                                                           G_SUITE METRICS
                                                           
 - Google Drive:(Lavanya Goluguri):
+Tasks:
 My main task for this project is to work on the drive data, find its anomalies, patterns, distributions and predictions.
-In the work of progress towards this task, I have selected the important metrics in the drive data and applied time series analysi on the 
-data. To discuss about it in detail my Machine learning analysis is as stated below.
-
+In the work of progress towards this task, I have selected the important metrics in the drive data and applied time series analysi on
+the data. To discuss about it in detail my Machine learning analysis is as stated below.
 So, the metrics that are mainly focused on in the drive data are:
 1day_active_users
 30day_active_users
@@ -27,8 +27,15 @@ Google_Spreadsheets_created
 Google_spreadsheets_edited
 Google_drawings_created
 Google_drawings_edited
+I considered these as those point to how much content is being created, and how much is being actually collaborated/updated after
+creation.
+Question asked: The question that I mainly posed on my data, is can I predict the data of 2020 based on my current available data and
+how accurate would be the predictions.
+Methods Used: The methods used in answering this question is Time series analysis using fb prophet.
+What was done to solve the question:
+Outcomes:
+Their Implications:
 
-I considered these as those point to how much content is being created, and how much is being actually collaborated/updated after creation.
-Question asked: The question that I mainly posed on my data, is can I predict the data of 2020 based on my current available data.
+
 
 
