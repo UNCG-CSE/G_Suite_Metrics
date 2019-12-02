@@ -87,3 +87,16 @@ The decent predictions for emails_Received, emails_sent, 1day_active_users, emai
  5) Students who graduated or Faculty leaving UNCG might not be the same "quality" users as users coming into UNCG, as in a new users are     not as in grained as older users and will not use it that much in the beginning. With a influx of new users over the years it could     explain why the growth is not proportional. 
 The anomolies found in inbound_rejected_emails and inbound_spam_emails can be explained by multiple of reasons. Before Nick (The mentor) joined the ITS Department, the ITS department used to be only reactive too attacks or spam. Over the years the ITS department took the "best defense is the best offense" approach by being more proactive. Additionally it is likely Google is doing a better job of handling rejections than they were before. IE : better at spam and phishing prevention. These reasons explains why there is a huge drop off in these attributes. The implication here is that there is progress being made to limit spam or hazardous emails and that is a good thing. 
 
+- Dashboard Development and Calendar Analysis (Jackie Cuong):
+
+Tasks: 
+My main task was to develop a dashboard to help visualize the data for our mentor and for later use by the mentor, I also had a small task in performing time series analysis on the google calendar data.
+
+Question asked: 
+How can I visualize data to demonstrate changes in the data over time?
+
+Methods used: 
+Used google data studio and its graph generation features to create line graphs to demonstrate changes in the data over time and in the future, and used FB Prophet to make predictions on Google Calendar data
+
+Results and Outcomes:  
+Dashboard is complete and filled with line graphs with data containing both data gathered from G-Suites and data predicted using FB Prophet, along with data filtering and date filtering for extended analysis.  For the calendar analysis the prediction made displayed a graph that had a very slight increase in number of users towards the end of the graph, this implies that in 2020 the amount of users using google calendar will increase.
