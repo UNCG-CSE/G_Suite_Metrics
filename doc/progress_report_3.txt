@@ -48,4 +48,42 @@ What were the outcomes and What are their implications?
 
 
 
+- Google Gmail:(Henry Reichard):
+Tasks:
+My main task for this project is to work on the gmail data, find its anomalies, patterns, distributions and predictions.
+In the work of progress towards this task, our mentor have selected the important metrics in the gmail data and applied time series analysi on the data. I also picked additional metrics that might be interesting for this project. 
+So, the metrics that are mainly focused on in the drive data are:
+Mentor picked attributes:
+num_emails_received
+num_emails_sent
+num_inbound_rejected_emails
+num_inbound_spam_emails
+num_inbound_non_spam_emails
+Additional attributes:
+1day_active_users
+num_emails_exchanged
+inbound_delivered_emails
+outbound_rejected_emails
+
+Question asked:
+The question that I mainly posed on my data, is can I predict the data of 2020 based on my current available data and
+how accurate would be the predictions and if I can fill 0s or missing days in my dataset.
+
+Methods Used: 
+The methods used in answering this question is Time series analysis using fb prophet.
+
+What was done to solve the question: 
+Written a function that sent the time column and the attribute to the fb prophet function. The fb prophet function returns a crossvalidation head and tail, and a plot of the prediction and the datapoints. Additionally written a function to send the data and return a MAPE graph to visualize the error. Some predictions gave negative values and after talking with the mentor and with Dr.Mohanty I went ahead and cap the negative values with 0. I filled 0s and missing days in the dataset with the mentor picked attributes with predicted values
+
+Outcomes:
+For emails_Received, emails_sent, 1day_active_users,email_exchange got a really good prediction (MAPE score close to 0) for 365 days out into the future. For inbound_non_spam_emails it has a pretty decent MAPE score of around 16% for 40 days into the future prediction and around 44% at the end of the year prediction. It can give a decent prediction around 50 days in advance, which isnt too bad. For inbound_delivered_emails it gives a decent prediction all around, around 13% around 40 days into the future and 33% at the end of the prediction. For inbound_rejected_emails and inbound_spam_emails they have MAPE score of around 41% and 23% at 40 days into the future and 305% and 84% at 365 days. Inbound_rejected_emails have some anomolies in the data because there is strong spikes around the first half of the data and a period of growth and regression before it drops off around midpoint of 2017. After the drop off the growth is stagnated and no apparent spikes. This could explain the poor MAPE score because the data is vastly different in the first half and the second half. The MAPE score has improved once the time series analysis was performed on the second half of the data only. Inbound_spam_emails is preculiar as well because there is a massive drop off around the midpoint of 2018 and the growth is sluggish afterwards. This could explain the poor MAPE score near the end of the prediction as well. The explanation of these drop off will be explained below.
+
+Their Implications:
+The decent predictions for emails_Received, emails_sent, 1day_active_users, email_exchange, inbound_non_spam_emails, inbound_delivered_emails will give the ITS department a firm understanding what is happening with Gmail throughout the year and allow the ITS department to prepare in advance to seasonal and overall trends in Gmail. The big question is why these services are not growing proportional to the growth of UNCG? After discussing with the mentor possible conclusions has been made why this is happening. These possible conclusions are the following:
+ 1) Students don't send emails as much as they used to 5 years ago. 
+ 2) People are using chat more than email now. 
+ 3) Google is doing a better job of blocking spam from being received in the first place.
+ 4) Active users however are expected to see similar growth in relation to the overall population. It's possible students/users aren't          using their accounts as much as they used to. 
+ 5) Students who graduated or Faculty leaving UNCG might not be the same "quality" users as users coming into UNCG, as in a new users are     not as in grained as older users and will not use it that much in the beginning. With a influx of new users over the years it could     explain why the growth is not proportional. 
+The anomolies found in inbound_rejected_emails and inbound_spam_emails can be explained by multiple of reasons. Before Nick (The mentor) joined the ITS Department, the ITS department used to be only reactive too attacks or spam. Over the years the ITS department took the "best defense is the best offense" approach by being more proactive. Additionally it is likely Google is doing a better job of handling rejections than they were before. IE : better at spam and phishing prevention. These reasons explains why there is a huge drop off in these attributes. The implication here is that there is progress being made to limit spam or hazardous emails and that is a good thing. 
 
