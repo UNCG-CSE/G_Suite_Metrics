@@ -29,6 +29,10 @@ Project Goals:
 
 We are team of 5 enthusiastic Computer science students we are working towards improving our skills in the field of data science.   
 
+Dashboard Link:
+
+https://datastudio.google.com/reporting/fe89e59f-5ab0-4f5e-bd70-9154c80fd02a
+
 Team Name:
 
 OG_Suites
