@@ -36,14 +36,55 @@ I was also able to see the trends in the data for some attributes like what is t
 
 - Google Meet:(Anusha Vanama)
 Question asked
+Prediction of future metric value based on the current data set values for below metrics under Google Meet.
+google.meet:total_call_minutes 
+google.meet:num_30day_active_users
+google.meet:num_meetings
+google.meet:num_calls
+google.meet:average_meeting_minutes
+google.meet:total_meeting_minutes
 Why was the question asked?
+Our mentor is interested in finding the unexpected spikes, drops, trend changes and level shifts
+He is also interested in comparison among devices(iOS/android/jam board).
 
 Describe the method.
+Time series forecasting is a technique for the prediction of events through a sequence of time.
+The techniques predict future events by analyzing the trends of the past, on the assumption that future trends will hold similar to historical trends.
+Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects.
+Prophet is open source software released by Facebook's Core Data Science team. Facebook prophet is used to perform time series analysis on google meet metrics. 
+
+Linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and 
+one or more explanatory variables (or independent variables). Total_call_minutes is considered as dependent variable and Total_call_minutes_iOS, 
+Total_call_minutes_android, Total_call_minutes_jamboard are considered as independent variables.
+
 What was done to solve for the question?
-
+The input to Prophet is always a dataframe with two columns: ds and y. The ds (datestamp) column and the y column represents the values of a metric we wish to forecast.
+We fit the model by instantiating a new Prophet object. Predictions are made for the future period of 365 days(1 Year). 
+The predict method is used which will assign each row in future a predicted value. Plotted the forecast using Prophet.plot method.
+Prophet.plot_components method is used to see the trends and weekly seasonality of the time series. 
 Describe outcomes.
-What were the outcomes and What are their implications?
 
+What were the outcomes and What are their implications?
+Cross validations are done to assess prediction performance on a horizon of 70 days, starting with 210 days of training data in the first cutoff and then making predictions every 15 days.
+Performance metrics is used to compute some useful statistics of the prediction performance. The statistics computed are mean squared error (MSE), 
+root mean squared error (RMSE), mean absolute error (MAE), mean absolute percent error (MAPE), and coverage of the yhat_lower and yhat_upper estimates.
+
+The mean absolute percent error (MAPE) expresses accuracy as a percentage of the error. Because the MAPE is a percentage, 
+it can be easier to understand than the other accuracy measure statistics.
+During my Initial analysis, MAPE value is not displayed as most of the actual metric values in Google Meet data are zero. 
+Because MAPE divides the absolute error by the actual data, values close to 0 can greatly inflate the MAPE.
+I have observed that the metric values are zero from Jan 2018 to May 2018 for most of the Google Meet metrics. My mentor suggested me that the reason is 
+likely that metric didn't exist then, or google discontinued temporarily. He suggested me to perform time series analysis by ignoring them.
+The predicted trends for the nex year is similar to the trends in the previous years. 
+Even though after removing them, MAPE value is greater than 20 percent. Here,  MAPE does not give good results as we have a low volume of data. 
+In Google Meet metrics, all the actual values are very small.
+
+Simple Linear Regression and Multiple Linear Regression:
+The most common way to evaluate the overall fit of a linear model is by the R-squared value.
+Initially, I have performed simple linear regression is used to find relationship between total_call_minutes and total_call_minutes_ios.
+R-squared value for this model is around 0.25507273021955723.
+Using Multiple Linear Regression, I found out that the total_call_minutes_ios, total_call_minutes_android and total_call_minutes_jamboard are positively associated with total_call_minutes. 
+This model has a higher R-squared (0.299) than the previous model(0.25507273021955723), which means that this model provides a better fit to the data than a model that only includes total_call_minutes_ios.
 
 
 - Google Gmail:(Henry Reichard):
