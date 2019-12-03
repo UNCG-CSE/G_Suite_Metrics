@@ -1,28 +1,7 @@
 
                                                           G_SUITE METRICS
                                                           
-- Google Drive:(Lavanya Goluguri):
-Tasks:
-My main task for this project is to work on the drive data, find its anomalies, patterns, distributions and predictions.
-In the work of progress towards this task, I have selected the important metrics in the drive data and applied time series analysi on
-the data. To discuss about it in detail my Machine learning analysis is as stated below.
-So, the metrics that are mainly focused on in the drive data are:
-1day_active_users
-30day_active_users
-Google_forms_created
-Google_forms_edited
-Google_documents_created
-Google_documents_edited
-Google_presentations_created
-Google_presentations_edited
-Google_Spreadsheets_created
-Google_spreadsheets_edited
-Google_drawings_created
-Google_drawings_edited
-I considered these as those point to how much content is being created, and how much is being actually collaborated/updated after
-creation.
-Question asked: The question that I mainly posed on my data, is can I predict the data of 2020 based on my current available data and
-how accurate would be the predictions.
+ 
 Methods Used: The methods used in answering this question is Time series analysis using fb prophet.
 What was done to solve the question: As the data is time series data, I did the time series analysis to predict the future values.
 Functions from fb probphet are used to predict and forecast the data of 2020 based on the data of 2 years that is provided as input to the algorithm. 
@@ -139,3 +118,25 @@ Used google data studio and its graph generation features to create line graphs 
 
 Results and Outcomes:  
 Dashboard is complete and filled with line graphs with data containing both data gathered from G-Suites and data predicted using FB Prophet, along with data filtering and date filtering for extended analysis.  For the calendar analysis the prediction made displayed a graph that had a very slight increase in number of users towards the end of the graph, this implies that in 2020 the amount of users using google calendar will increase.
+
+-Google Account and Dashboard Development (Hieu Vo)
+My main task was to create visualizations to demonstate the change over time of some attributes. I also performed machine learning with google account data using simple linear regression and fb prophet to predict and forecast the future of specific atttribute. I also finished my pandas_profiling and correlation matrix.
+
+Main attributes:
+Google drive mb
+Google gmail mb
+Google gplus mb
+Google 1, 7 and 30 day active user
+Google total quota mb
+
+Progress:
+Using  fbprophet for forecasting time series data.
+Using linear-regression machine learning to predict the amount of data use for each google service based on amount of users.
+Visualization of data used from google Gmail, drive and Gplus
+
+Results:
+Predict the increasing in data usage in the future.
+Predict data usage base on number of users.
+Predict active users in the future.
+Visualizations help to tell the increasing or decreasing of data usage.
+
