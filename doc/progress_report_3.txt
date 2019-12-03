@@ -25,12 +25,14 @@ Question asked: The question that I mainly posed on my data, is can I predict th
 how accurate would be the predictions.
 Methods Used: The methods used in answering this question is Time series analysis using fb prophet.
 What was done to solve the question: As the data is time series data, I did the time series analysis to predict the future values.
-Functions from fb probphet are used to predict and forecast the data of 2020 based on the data of 2 years that is provided as input to the algorithm. 
-Then the predictions are plotted with cross validations, there are few attributes that predicted with good accuracies and few others where predictions were not as expected.
+Functions from fb probphet are used to predict and forecast the data of 2020 based on the data of 2 years that is provided as input to the algorithm. Then the predictions are plotted with cross validations, there are few attributes that predicted with good accuracies and few others where predictions were not as expected.
 I mainly considered mse(Mean squared error), mape(Mean absolute percentage error) as measures for error and accuracies.
+There are some attributes where the mape values are not present as y value is close to 0.
 Outcomes:
 Their Implications: I find the prediction were following the similar trends as the input data in many cases, there are clear variations that can be identified in the beggining of the semester, semester break, end of the semesters.
-The predictions are more accurate in the initial days of the forecast like the first 50 days than compared to the end of the days of the prediction.
+The predictions are more accurate in the initial days of the forecast like the first 50 days than compared to the end of the days of the prediction. 
+If we consider the the attributes 30day_active_users, the predictions are almost similar to the existing data and the mape scores for the initial days is only 4 percent, and in the end days of the prediction it is around 20-25 percent.
+In the middle of semester, the error value of the mape in the semester breaks is more as, this is how mape works, as the y value decreases, mape is inflated, So, we see more error when the data is low.
 I was also able to see the trends in the data for some attributes like what is the hourly usage, weekly usage, daily usage which can help in understanding how the google drive is being used by members of UNCG.
 
 
