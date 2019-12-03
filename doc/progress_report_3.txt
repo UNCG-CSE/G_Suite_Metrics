@@ -75,7 +75,7 @@ During my Initial analysis, MAPE value is not displayed as most of the actual me
 Because MAPE divides the absolute error by the actual data, values close to 0 can greatly inflate the MAPE.
 I have observed that the metric values are zero from Jan 2018 to May 2018 for most of the Google Meet metrics. My mentor suggested me that the reason is 
 likely that metric didn't exist then, or google discontinued temporarily. He suggested me to perform time series analysis by ignoring them.
-The predicted trends for the nex year is similar to the trends in the previous years. 
+The predicted trends for the nex year is similar to the trends in the previous years. Google meet usage is very less at the beginning of the semester and the usage increases slowly and at the end it is high. Again, after the semester ends usage is decreasing. The same pattern is followed in 2019 and the predicted pattern is also the same for 2020.
 Even though after removing them, MAPE value is greater than 20 percent. Here,  MAPE does not give good results as we have a low volume of data. 
 In Google Meet metrics, all the actual values are very small.
 
