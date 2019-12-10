@@ -20,13 +20,123 @@ Software Requirements
 
 Google Gmail:(Henry Reichard):
 
-Goals
+Goals: The goals for this project is the same for the overall project: Analysis, Anomalies, Prediction
+“Organizing Information Technology Services’ data to make it useful, accessible, actionable and aligned with data-informed decision making ideals.”
 
-Tasks
+Tasks: Data Cleaning, Data Statistics and Analysis, Machine Learning (Time Series Analysis). The results will be listed below.
 
-Results obtained
+Data Cleaning: 
+Data itself was relatively clean for Gmail, there was only missing days or missing data. These were not significant, around
+60 days total of missing days or data. I originally dropped them but I eventually filled them with predicted data.
 
-Software Requirements
+Data Statisticss:
+Attributes I focused on for stats: 
+num_emails_received
+num_emails_sent
+num_inbound_rejected_emails
+num_inbound_spam_emails
+num_inbound_non_spam_emails
+Task 1: Extraction of Google Email data and  data cleaning
+Task 2: Statistical Evaluation
+Task 3: Distribution Modeling
+Task 4: Point Estimates
+Task 5: Finding Correlation and Co-variance within the data
+Task 6: Hypothesis testing
+Below is the github link for all the above tasks
+https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Henry
+
+Results for Task 1:
+the data is collected from 03-23-2015 to 08-19-2019. I have separated the gmail related data from the original dataset, and created a new data frame and csv file so 
+I can preform data analysis on my service.I cleaned the data by dropping nan value rows and dropping 0 value rows that occurs when G-Suites are down for maintenence. Luckily the number of dropped rows
+were marginal so it did not effect the data that much. Also the data is relatively clean so I didn't have to do anymore data cleaning. 
+I also move all unique attributes from the rows to be there own columns, so now I have a dataframe with 28 columns and 1545 rows. Each row represents a new day from
+3-23-2015 through 08-19-2019. I set the row column as index and passed it through pd.datetime. Now it is easy for me to plot and index the data.
+
+Results for Task 2: 
+Doing this task is relatively easy, df.describe will give you the basic statistics immediatly. I did this call for the overall gmail data and the 5 attributes my mentor wants
+me to focus on.
+Mean: emails received =280777, emails sent = 27640, inbound rejected emails = 16359, inbound spam emails = 44881, inbound non spam emails = 162224
+and the mean for inbound non-spam emails are 162224.
+Max: emails received = 648823, emails sent = 56768, inbound rejected emails = 144169, inbound spam emails = 127402, inbound nonspam emails = 442820
+Min: emails received = 74919, emails sent = 1181, inbound rejected emails = 0, inbound spam emails = 9578, inbound nonspam emails = 50814
+Variance: emails received = 1.323908e+10, emails sent = 2.538946e+08, inbound rejected emails = 3.410658e+08, inbound spam emails = 4.104442e+08, inbound nonspam emails = 3.070721e+09
+Count: 1544 for all of them.
+
+Results for Task 3:
+The five attributes are discrete and  the distribution fit is poisson distribution because it shows how many  times an event likely to occur over specific time. 
+The estimators I used is the kernel density estimator to check my distribution modelling and Maximum Likely Estimator using continous distributions to find the best fit for
+the data. I ran a kstests to to find which estimator has the better fit. I also went ahead and did this for 7 more attributes.
+
+Results for Task 4:
+For the point estimates, I have taken samples from emails_received and used central limit theorem to show the samples look normal and the 
+mean is much closer to the actual mean. I have calculated the confidence level for emails received and the sample means falls within the confidence level.
+I have also calculated the confidence intervals for the  z- critical values on 11 other attributes as well.
+
+Results for Task 5:
+I checked the covariance and correlation of the 5 parameters: 
+Emails received and emails sent correlation: .95
+Emails receive and inbound non spam emails correlation: .88
+Emails sent and inbound non spam emails correlation: .83
+These correlations are very strong since it very close to 1, the correlations for the rest of the 5 attributes are not past .50 and thus are weak.
+
+Results for Task 6:
+I formed the hypothesis that the number of the 1day active users is smaller in December when compared to active users for the overall year.
+I preformed a 1 sample t test with 1 day active users in december and mean of 1 day users throughout the year.
+The p value is 1.22800432e-10, which is <0.05 which means we to reject the null hypothesis and it shows the distributions are different. 
+Thus the mean values of the sample mean (dec) and the population mean (odu) are different. Since the mean for december is 14764 and the mean for odu is 17342, and the p value 
+is much less then 0.025 (the probability of finding the data in the tail ends of the distrubition, 0.025 is on the left side with values smaller then the mean) it is concluded that 
+month of december has less active users.
+I also did hypothesis testing emails received and emails and I conducted a 2 sample t-test. pvalue returns 0 when the probability is super small, which means it much less then 0.05 
+so the null hypothesis is rejected. These distributions are different. I did hypothesis testing for inbound emails and inbound spam emails and conducted a 2 sample t -test and
+the p value was super small as well and the null hypothesis is rejected. Finally I did the same hypothesis test I did for 1 day active users for all 5 attributes and I gotten the same
+results, which is amount of email traffic in december is smaller and significantly different compared to the rest of the year.
+
+Machine Learning (Time Series Analysis):
+Same attributes listed above, but I worked on additional attributes:
+1day_active_users
+num_emails_exchanged
+inbound_delivered_emails
+outbound_rejected_emails
+Question asked:
+
+The question that I mainly posed on my data, is can I predict the data of 2020 based on my current available data and
+how accurate would be the predictions and if I can fill 0s or missing days in my dataset.
+
+Methods Used: 
+The methods used in answering this question is Time series analysis using fb prophet.
+
+What was done to solve the question: 
+Written a function that sent the time column and the attribute to the fb prophet function. The fb prophet function returns a crossvalidation head and tail, and a plot of the prediction and
+the datapoints. Additionally written a function to send the data and return a MAPE graph to visualize the error. Some predictions gave negative values and after talking with the mentor and 
+with Dr.Mohanty I went ahead and cap the negative values with 0. I filled 0s and missing days in the dataset with the mentor picked attributes with predicted values
+
+Outcomes:
+For emails_Received, emails_sent, 1day_active_users,email_exchange got a really good predictions (MAPE score close to 6% to 23%) for 365 days out into the future. For inbound_non_spam_emails 
+and outbound_non_spam_emails it has a pretty decent MAPE score of around 19% for 40 days into the future prediction and around 35% and 38% at the end of the year prediction. It can give a very 
+good prediction around 50 days in advance, which isnt too bad.For inbound_rejected_emails and inbound_spam_emails they have MAPE score of around 48% and 30% at 40 days into the future and 240% 
+and 84% at 365 days. Inbound_rejected_emails have some anomolies in the data because there is strong spikes around the first half of the data and a period of growth and regression before it 
+drops off around midpoint of 2017. After the drop off the growth is stagnated and no apparent spikes. This could explain the poor MAPE score because the data is vastly different in the first 
+half and the second half. The MAPE score has improved once the time series analysis was performed on the second half of the data only. Inbound_spam_emails is preculiar as well because there is a 
+massive drop off around the midpoint of 2018 and the growth is sluggish afterwards. This could explain the poor MAPE score near the end of the prediction as well. Also to note, fbprophet gives a 
+downward trend for almost all of the attributes except for 1day_active_users. This implies the amount of users is increasing but the utilization of these attributes are decreasing.
+
+Their Implications:
+The decent predictions for emails_Received, emails_sent, 1day_active_users, email_exchange, inbound_non_spam_emails, inbound_delivered_emails will give the ITS department a firm understanding what 
+is happening with Gmail throughout the year and allow the ITS department to prepare in advance to seasonal and overall trends in Gmail. The big question is why these services are not growing 
+proportional to the growth of UNCG? After discussing with the mentor possible conclusions has been made why this is happening. These possible conclusions are the following:
+ 1) Students don't send emails as much as they used to 5 years ago. 
+ 2) People are using chat more than email now. 
+ 3) Google is doing a better job of blocking spam from being received in the first place.
+ 4) Active users however are expected to see similar growth in relation to the overall population. It's possible students/users aren't using their accounts as much as they used to. 
+ 5) Students who graduated or Faculty leaving UNCG might not be the same "quality" users as users coming into UNCG, as in a new users are not as in grained as older users and will not 
+use it that much in the beginning. With a influx of new users over the years it could explain why the growth is not proportional. The anomolies found in inbound_rejected_emails and inbound_spam_emails 
+can be explained by multiple of reasons. Before Nick (The mentor) joined the ITS Department, the ITS department used to be only reactive too attacks or spam. Over the years the ITS department took the 
+"best defense is the best offense" approach by being more proactive. Additionally it is likely Google is doing a better job of handling rejections than they were before. IE : better at spam and phishing 
+prevention. These reasons explains why there is a huge drop off in these attributes. The implication here is that there is progress being made to limit spam or hazardous emails and that is a good thing. 
+
+Software Requirements:
+The enviroment where this project ran is listed in the utils folder in this repository. 
+Link: https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/util/Gmail%20Enviroment
 
 Dashboard Development and Google Calendar Analysis (Jackie Cuong):
 
