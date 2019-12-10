@@ -6,7 +6,7 @@ https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-
 
 Description of the project.
 
-G Suite is a set of cloud computing, productivity and collaboration tools, software and products developed by Google. G Suite comprises Gmail, Drive, Docs, Calendar, Hangouts Chat, Hangouts Meet, Mobile, Voice, Slides, Sites, Sheets, Keep and Tasks, Groups, Google+, Forms, Contacts, Cloud Search, Chrome Browser.
+G Suite is a set of cloud computing, productivity and collaboration tools, software and products developed by Google. G Suite comprises Gmail, Drive, Docs, Calendar, Hangouts Chat, Hangouts Meet, Mobile, Voice, Slides, Sites, Sheets, Keep and Tasks, Groups, Google+, Forms, Contacts, Cloud Search, Chrome Browser. We are mainly focusing on the metrics Drive, Meet, Gmail, Accounts and Calendar.
 Currently, Source Data for Google (G Suite) report metrics is pulled automatically into Splunk from Google on daily basis.
 
 Below are the details of Data Set which we are using for this project
@@ -39,15 +39,15 @@ OG_Suites
 
 Team Members: 
 
-•	Lavanya Goluguri - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_lavanyagoluguri
+•	Lavanya Goluguri(Google Drive) - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_lavanyagoluguri
 
-•	Anusha Vanama - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_AnushaVanama
+•	Anusha Vanama(Google Meet) - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_AnushaVanama
 
-•	Jackie Cuong - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_JackieCuong
+•	Jackie Cuong(Google calendar) - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_JackieCuong
 
-•	Hieu Vo - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_Hieu
+•	Hieu Vo(Google Accounts) - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_Hieu
 
-•	Henry Reichard - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_Henry
+•	Henry Reichard(Gmail) - https://github.com/UNCG-CSE/G_Suite_Metrics/tree/Gsuite_Henry
 
 •	Instructor: Dr. Somya Mohanty
 
