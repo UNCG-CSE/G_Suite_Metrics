@@ -1,2 +1,0 @@
-You can upload g_suite_gmail_enviroment.yml file directly into anaconda and you will have the enviroment where this project ran. Or 
-you can manually build the enviroment with the gmail_spec-file.
