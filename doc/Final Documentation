@@ -14,7 +14,19 @@ Software Requirements
 
 Google Meet:(Anusha Vanama):
 
-Goals
+Goals:
+Below are the main goals of this project
+Performing Analysis on the data set.
+Finding Anomalies using metric values in the data set.
+Prediction of future metric value based on the current data set values.
+
+Our mentor suggested me to mainly focus on below 6 metrics under Google Meet. He is also interested in comparison among devices(iOS/android/jam board)
+google.meet:total_call_minutes 
+google.meet:num_30day_active_users
+google.meet:num_meetings
+google.meet:num_calls
+google.meet:average_meeting_minutes
+google.meet:total_meeting_minutes
 
 Tasks
 
