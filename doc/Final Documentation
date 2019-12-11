@@ -5,12 +5,96 @@ Goals:
 The goals for this project is to do analysis on the data that was given to us related to G Suite by the UNCG ITS, and find the predictions and the anamolies in the data.
 As part of this I have choosen the google drive service where, I have performed statistical analysis, 
 distribution modelling, hypothesis testing and Time series analysis on the drive data.
+I have separated the drive related data from the original gsuite metrics, and created a new data frame that is fexible to query on parameters.cleaned that data, dropped the rows that has all nan values, replaced the remaining nan values with the mean of the columns.
+As per the suggestions from the mentor I focused more on the 1day active users and 30 day active users.
+Also google forms created and edited, google documents created and edited. 
+As those point to how much content is being created, and how much is being actually collaborated/updated after creation.
 
-Tasks
+So, the metrics that are mainly focused on in the drive data are:
+1day_active_users
+30day_active_users
+Google_forms_created
+Google_forms_edited
+Google_documents_created
+Google_documents_edited
+Google_presentations_created
+Google_presentations_edited
+Google_Spreadsheets_created
+Google_spreadsheets_edited
+Google_drawings_created
+Google_drawings_edited
+Google_forms_created_delta
+Google_documents_created_delta.
+Tasks:
+In oreder to achieve the final goals of the project I have followed a step by step method based on which I have carried out the tasks.
+
+Task 1: Extraction of Google drive data and data cleaning
+Task 2: Statistical evaluation of drive data on above mentioned metrics
+Task 3: Distribution Modeling
+Task 4: Finding Correlation and Co-variance for different metrics
+Task 5: Point Estimates
+Task 6: Hypothesis testing
+Task 7: Machine Learning
 
 Results obtained
 
-Software Requirements
+Task 1 Results: Extraction of Google drive data and data cleaning:
+I have extracted the drive data from the original data set, the drive data set is now of the size 831 rows X 144 columns. 
+The data is collected from 03/2017 to 08/2019.
+There few data values that are NAN, when the observations with the nan values are insignificant then i have dropped them, 
+the obsevations with significant information the nan values are replaced with mean value of the metric.
+
+Task 2: Statistical evaluation of drive data on above mentioned metrics:
+I have performed statistical evaluation on the above mentioned metrics, I will discuss the results of a couple of metrics here.
+The metrics considered are the google_forms_created and the google_forms_edited. The basic stats like min, max, standard deviation mean are calculated.
+The values are as follows for google_forms_created mean is 26, standard deviation is 22.96, min is 0, max is 251.
+The values are as follows for google_forms_edited mean is 65, standard deviation is 47.53, min is 0, max is 270.
+
+Task 3 Results: Distribution Modeling
+All the metrics in the drive data are discrete data, I have plotted the histograms of the metrics and tried to fit the distributions for the data.
+Both the metrics google_forms_created and google_forms_edited have followed the poisson distribution.
+I have used the Kernel density estimator for both th emetrics to fit the distribution model.
+
+Task 4 Results: Finding Correlation and Co-variance for different metrics
+The corelation and covariance between different metrics is calculated to see, if there is any significant trend in the data.
+The orrelation and the covariance between the metrics google_forms_created and google_forms_edited is covariance is 933.16 and corelation is 0.85
+From this we can interpret that when there is an increase in forms created there is also an increase in the number of forms edited.
+Whereas the the corealation between the metrics 1day_active_users and 30day_active_users is 0.45, means they are not highly correlated.
+
+Task 5 Results: Point Estimates
+Point estimate are used to estimate the mean value of a metric. Calculated the the sample means of the metric by taking th esmaple size of 300.
+plotted the sample means which follows a normal distribution using the Central limit theorem. The variations between the actual mean and the point estimates mean is only 0.079.
+Calculated the confidence interval, z critical value and t-crtical value for the metrics.
+
+Task 6 Results: Hypothesis testing
+I formed the hypothesis tha the mean of the 1day active users is significantly different from the mean of 30 day active users,
+I did the one sample ttest, two sample ttest independent and the relative testing. 
+The p value is 0.32, which is >0.05 means we fail to reject the null hypothesis. 
+The same has been done for the other metrics as well, I did all the tasks of a metric in comparision to other metric, Google_forms_created related results are compared to Google_forms_edited, and hypothesis is formulated as both are similar.
+Google_documents_created results are compared to google_documents_edited and so on. 
+I have formulated a different null hypothesis for each of this metrics like April month data for spreadsheets_created is different from its May month data or 2017 data for the google_presentations is similar to 2018 data of google_presentations.
+The null hypothesis is rejected in few cases and in some cases based on the p value we failed to reject the null hypothesis.
+
+Task 7 Results: Machine Learning
+As the data is time series data, I did the time series analysis to predict the future values.
+Functions from fb probphet are used to predict and forecast the data of 2020 based on the data of 2 years that is provided as input to the algorithm. Then the predictions are plotted with cross validations, there are few attributes that predicted with good accuracies and few others where predictions were not as expected.
+I mainly considered mse(Mean squared error), mape(Mean absolute percentage error) as measures for error and accuracies.
+There are some attributes where the mape values are not present as y value is close to 0.
+
+Outcomes:
+Their Implications: I find the prediction were following the similar trends as the input data in many cases, there are clear variations that can be identified in the beggining of the semester, semester break, end of the semesters.
+The predictions are more accurate in the initial days of the forecast like the first 50 days than compared to the end of the days of the prediction. 
+If we consider the the attributes 30day_active_users, the predictions are almost similar to the existing data and the mape scores for the initial days is only 4 percent, and in the end days of the prediction it is around 20-25 percent.
+In the middle of semester, the error value of the mape in the semester breaks is more as, this is how mape works, as the y value decreases, mape is inflated, So, we see more error when the data is low.
+I was also able to see the trends in the data for some attributes like what is the hourly usage, weekly usage, daily usage which can help in understanding how the google drive is being used by members of UNCG.
+
+
+Software Requirements:
+
+
+Below is the github link for all my tasks for the project
+https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/lavanya
+
 
 Google Meet:(Anusha Vanama):
 
