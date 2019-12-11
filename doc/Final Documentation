@@ -1,6 +1,10 @@
+                                                    G-SUITE METRICS
 Google Drive:(Lavanya Goluguri):
 
-Goals
+Goals:
+The goals for this project is to do analysis on the data that was given to us related to G Suite by the UNCG ITS, and find the predictions and the anamolies in the data.
+As part of this I have choosen the google drive service where, I have performed statistical analysis, 
+distribution modelling, hypothesis testing and Time series analysis on the drive data.
 
 Tasks
 
