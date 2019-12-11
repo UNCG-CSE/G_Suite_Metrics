@@ -1,4 +1,8 @@
                                                     G-SUITE METRICS
+Software Requirements:
+The enviroment where this project ran is listed in the utils folder in this repository. 
+Link: https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/util/Gmail%20Enviroment
+
 Google Drive:(Lavanya Goluguri):
 
 Goals:
@@ -87,9 +91,6 @@ The predictions are more accurate in the initial days of the forecast like the f
 If we consider the the attributes 30day_active_users, the predictions are almost similar to the existing data and the mape scores for the initial days is only 4 percent, and in the end days of the prediction it is around 20-25 percent.
 In the middle of semester, the error value of the mape in the semester breaks is more as, this is how mape works, as the y value decreases, mape is inflated, So, we see more error when the data is low.
 I was also able to see the trends in the data for some attributes like what is the hourly usage, weekly usage, daily usage which can help in understanding how the google drive is being used by members of UNCG.
-
-
-Software Requirements:
 
 
 Below is the github link for all my tasks for the project
@@ -216,7 +217,6 @@ In Google Meet metrics, all the actual values are very small.
 Below is the github link for all the above tasks
 https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Anusha
 
-Software Requirements
 
 Google Gmail:(Henry Reichard):
 
@@ -334,10 +334,6 @@ can be explained by multiple of reasons. Before Nick (The mentor) joined the ITS
 "best defense is the best offense" approach by being more proactive. Additionally it is likely Google is doing a better job of handling rejections than they were before. IE : better at spam and phishing 
 prevention. These reasons explains why there is a huge drop off in these attributes. The implication here is that there is progress being made to limit spam or hazardous emails and that is a good thing. 
 
-Software Requirements:
-The enviroment where this project ran is listed in the utils folder in this repository. 
-Link: https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/util/Gmail%20Enviroment
-
 Dashboard Development and Google Calendar Analysis (Jackie Cuong):
 
 Goals: To analyze the google calendar data set, visualize the data set, make predictions on the data set, and develop a dashboard for the G_Suite metrics
@@ -348,9 +344,7 @@ Results obtained
 1. DATA STATISTICS/ANALYSIS- Analyzed the data using python I found almost no anomalies with the data set other than 1 specific date in May which had a metric of 10,000 compared to the average of the rest of the data set at 3,500, since this was such a huge anomaly I decided to drop it.  I also found that despite a growing UNCG student body, the number of daily users for the calendar dataset does not change much if at all.  I also tested a hypothesis that during the third part of the week, google calendar would see more use, but the results prove that wasn't the case as the P-Value that was returned was less than .025
 2. MACHINE LEARNING-For machine learning the data acted as predicted and did not have any strange readings, with the predicted data set predicting a very slight increase in google calendar daily use at the end of 2020
 3.DASHBOARD- For the dashboard I added time series graphs for every dataset and also for the predicted data set csv.  For each data set there is also a data filter for the ability to change which metric to analyze and also a date filter to change which dates the graph displays.
-Software Requirements- 
-The environment where this project ran is listed in the utils folder in this repository. 
-Link: https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/util/Gmail%20Enviroment
+
 
 Google Account and Dashboard Development (Hieu Vo):
 
@@ -360,4 +354,3 @@ Tasks
 
 Results obtained
 
-Software Requirements
