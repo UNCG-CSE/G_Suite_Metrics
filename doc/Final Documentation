@@ -29,8 +29,108 @@ google.meet:average_meeting_minutes
 google.meet:total_meeting_minutes
 
 Tasks
+As it will be too long to document the results of all metrics here, I had documented results of few metrics.
+But I had documented the results of above 6 metrics using markdown which can be referred in below github link
+https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Anusha
+
+Task 1: Extraction of Google Meet data and statistical evaluation
+Task 2: Statistical evaluation of Total Call Minutes metric of Google Meet
+Task 3: Distribution Modeling
+Task 4: Finding Correlation and Co-variance within the data
+Task 5: Point Estimates
+Task 6: Hypothesis testing
+Task 7: Machine Learning
 
 Results obtained
+
+Results for Task 1: Extraction of Google Meet data and statistical evaluation
+Extracted Google Meet related metrics from the G suite Metrics data set and stored in a new data frame. 
+Performed Initial analysis on Google Meet data.
+There are 55 unique metric names, 29434 observations under Google Meet recorded from January 14th, 2018 to August 17th, 2019.
+There are 17731 observations in 2018 and 11703 in 2019.
+Some of the Metric Values of Google Meet includes Number of users, Number of Minutes, Number of Meetings, Number of Calls, 
+Usage of Chromebox and Usage of Chromebase. 
+We have same metric names in both years and there are no new metrics added in 2019.
+
+
+Results for Task 2: Statistical evaluation of Total Call Minutes metric of Google Meet
+Calculated Mean, Mode, Variance, Standard deviation, Interquartile (IQR) range and all basic statistics for total call minutes metric.
+There are 543 observations under Total Call Minutes metric of Google Meet. There are 328 observations in 2018 and 215 in 2019.
+The Metric Value here is Number of total call minutes which are extracted on daily basis. Metric value is 0 for 155 days.
+Maximum number of total_call_minutes is 7623 minutes recorded on 2019-07-01.
+Median of metric values is 782 and Mean value is 1152.29 which is higher than median as we have 
+Maximum Outliers for total call minutes for few days in both 2018 and 2019. 
+Eg: There are 7623 minutes on 2019-07-01. Interquartile (IQR) range value is 1861 minutes.
+Variance and Standard Deviation are not the right measures of spread as the data is having maximum outlier values.
+Median absolute deviation is the right measure of spread for TotalCallMinutes metric which is around 1159.4 minutes.
+
+Results for Task 3: Distribution Modeling
+Plotted Total Call Minutes data using Histograms to observe what sort of distribution will fit my data.
+Kernel Density Estimation is used to find probability density function (PDF) for Total Call Minutes data.
+Total call minutes comes under continuous data.
+It follows the exponential distribution, the exponential started high and it has a long tail that trails off to the right 
+
+Results for Task 4: Finding Correlation and Co-variance within the data
+Our mentor is interested in the comparison of the types of devices (ios/android etc). 
+I tried finding Correlation between total_call_minutes_ios, total_call_minutes_android, total_call_minutes
+Correlation of Android and iOS: 0.08
+Correlation of Android and Total: 0.23
+Correlation of iOS and Total: 0.51
+The closer to 0 the correlation coefficient is, the weaker the relationship between the variables. 
+Here, there is weaker relationship between Android and iOS usage of google meet.
+There is better relationship between Total usage and iOS usage of google meet when compared to the relationship between Total Usage and Android Usage.
+Observed that the Android usage of google meet is less when compared to iOS usage of google meet.
+
+Results for Task 5: Point Estimates
+Point estimates are used to estimate the mean of total call minutes of all days. Total Call Minutes data follows exponential distribution.
+Used Central Limit Theorem by taking the distribution of many sample means. Calculated confidence intervals and z-critical values.
+Point estimate based on a sample of 400 observations overestimated the true call minutes mean by 22.560137 minutes.
+The distribution has high skewness, and the plot revealed the data is clearly not normal. The sample drawn from this data is also having same shape.
+Created a sampling distribution by taking 300 samples from our call minutes data and then making 300 point estimates of the mean.
+The sampling distribution appeared to be normal after applying Central Limit Theorem.
+In addition, the mean of the sampling distribution approached the true mean, there is only a difference of 3 minutes.
+Calculated 95% confidence for the mean point estimate and noticed that the calculated confidence interval is very close the true call minutes mean of 1148.051565
+24 out of 25 samples of the 95% confidence intervals overlapped the red line marking the true mean.
+
+Results for Task 6: Hypothesis testing
+Tested whether the mean of total call minutes for Google Meet in the year 2019 differs from the year 2018 
+Tested whether the Mean of number of meetings in google meet is similar to the Mean of number of meetings in google meet using iOS or Android.
+Used Two-Sample T-test as comparison is between means of two independent data samples for all the scenarios
+In all the cases, Null hypothesis is that the means of both groups are the same. Alternate Hypothesis is that the mean is different.
+For all scenarios, p value is less than 0.05 which means that we reject the null hypothesis. 
+Observation is that the Mean of total Call Minutes of Google Meet in year 2019 is different from year 2018 and 
+The Mean of number of meetings in google meet is different from Mean of number of meetings in google meet using iOS as well as Android.
+
+Results for Task 7: Machine Learning
+Our mentor is interested in finding the unexpected spikes, drops, trend changes and level shifts.
+Time series forecasting is a technique for the prediction of events through a sequence of time.
+The techniques predict future events by analyzing the trends of the past, on the assumption that future trends will hold similar to historical trends.
+Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects.
+Prophet is open source software released by Facebook's Core Data Science team. Facebook prophet is used to perform time series analysis on google meet metrics. 
+
+Describe outcomes.
+What were the outcomes and What are their implications?
+Time series forecasting:
+The input to Prophet is always a dataframe with two columns: ds and y. The ds (datestamp) column and the y column represents the values of a metric we wish to forecast.
+We fit the model by instantiating a new Prophet object. Predictions are made for the future period of 365 days(1 Year). 
+The predict method is used which will assign each row in future a predicted value. Plotted the forecast using Prophet.plot method.
+Prophet.plot_components method is used to see the trends and weekly seasonality of the time series. 
+Cross validations are done to assess prediction performance on a horizon of 70 days, starting with 210 days of training data in the first cutoff and then making predictions every 15 days.
+Performance metrics is used to compute some useful statistics of the prediction performance. The statistics computed are mean squared error (MSE), 
+root mean squared error (RMSE), mean absolute error (MAE), mean absolute percent error (MAPE), and coverage of the yhat_lower and yhat_upper estimates.
+
+The mean absolute percent error (MAPE) expresses accuracy as a percentage of the error. Because the MAPE is a percentage, 
+it can be easier to understand than the other accuracy measure statistics.
+During my Initial analysis, MAPE value is not displayed as most of the actual metric values in Google Meet data are zero. 
+Because MAPE divides the absolute error by the actual data, values close to 0 can greatly inflate the MAPE.
+I have observed that the metric values are zero from Jan 2018 to May 2018 for most of the Google Meet metrics. My mentor suggested me that the reason is 
+likely that metric didn't exist then, or google discontinued temporarily. He suggested me to perform time series analysis by ignoring them.
+The predicted trends for the nex year is similar to the trends in the previous years. 
+Even though after removing them, MAPE value is greater than 20 percent. Here,  MAPE does not give good results as we have a low volume of data. 
+In Google Meet metrics, all the actual values are very small.
+
+Below is the github link for all the above tasks
+https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Anusha
 
 Software Requirements
 
