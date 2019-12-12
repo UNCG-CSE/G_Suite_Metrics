@@ -33,6 +33,19 @@ Dashboard Link:
 
 https://datastudio.google.com/reporting/fe89e59f-5ab0-4f5e-bd70-9154c80fd02a
 
+•	Software Requirements
+Required modules:
+•	pip install pandas
+Useful for various data scrubbing functionality.
+•	pip install numpy
+Used to perform the basic statistical analysis
+•	pip install scipy 
+The stats in scipy are used for the distibution modelling
+•	pip install matplotlib
+Used for the plots
+•	Fb Prophet 
+Used for Predictive time series analysis.
+
 Team Name:
 
 OG_Suites
