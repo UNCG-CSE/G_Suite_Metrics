@@ -348,9 +348,66 @@ Results obtained
 
 Google Account and Dashboard Development (Hieu Vo):
 
-Goals
+Goals:
+The goals is to do analysis on the data that was given to us related to G Suite by the UNCG ITS, and find the predictions and the anomalies in the data.
+As part of this I have chosen the google account service where, I have performed statistical analysis, hypothesis testing, pandas_ profiling and machine learnings.
 
-Tasks
+So, the metrics that are mainly focused on in the drive data are:
+google.accounts:num_7day_logins                  
+google.accounts:num_1day_logins                           
+google.accounts:num_suspended_users                  
+google.accounts:num_disabled_accounts 
+google.accounts:num_30day_logins               
+google.accounts:num_users                                                                    
+google.accounts:gplus_photos_used_quota_in_mb                  
+google.accounts:gmail_used_quota_in_mb                         
+google.accounts:total_quota_in_mb                              
+
+Tasks:
+Task 1: Extraction of Google account data
+Task 2: Statistical evaluation of data
+Task 3: Finding Correlation and Co-variance for different metrics
+Task 4: Point Estimates
+Task 5: Hypothesis testing
+Task 6: Machine Learning
+Task 7: Dash Board
 
 Results obtained
+
+Task 1 Results: Extraction of Google account data:
+I have extracted the account data from the original data set and divide them into different csv file. I will later use theses csv files for pandas profiling and difference methods I will use such as machine learning. I also transform data into different form because different methods require different specific input.
+
+Task 2: Statistical evaluation
+I have performed statistical evaluation using pandas.describe(). This method helped me to obtain max, min, count, mean and other useful information from each metric in google account. I also create a method create line and bar graph for each month for each metric. Pandas profiling also show missing value and bar graph for each metric.
+
+Task 3 Results: Finding Correlation and Covariance for different metrics
+The correlation and covariance between google.accounts:num_1day_logins and google.accounts:num_30day_logins is 1002630.41 and 0.29. The correlation score is small and closer to 0 so 2 metrics are not highly correlated. We can predict that there is no significant relationship between the 2 metrics. Pandas profiling also provided a correlation matrix.
+
+Task 4 Results: Point Estimates
+Point estimates are used to estimate the mean value of a metric. Calculated the the sample means of the metric by taking the sample size of all google.accounts:num_1day_logins.
+I plotted the sample means which follows a normal distribution using the Central limit theorem. I was able to find the z-critical value: 1.95996398454005 and the Confidence Interval: (7221.476370852023, 7657.689629147976) and t-critical value: 2.0638985616280205 and Confidence interval: (5588.076965295933, 8788.963034704067)
+
+Task 5 Results: Hypothesis testing
+The null hypothesis is that the means of both groups, google.accounts:drive_used_quota_in_mb and google.accounts:gmail_used_quota_in_mb, are the same.
+I did the two sample t-test to the 2 metrics. The p value is 2.5775440597091544e-55, which is < 0.05 means we accept the rejection of the null hypothesis. 
+
+Task 6 Results: Machine Learning.
+Functions from fb prophet are used to predict and forecast the data of 2020 based on the data from previous years. The method predicted with good accuracy. Mse(Mean squared error), mape(Mean absolute percentage error) as measures for error and accuracies show that the error is low. The regression model show good results as well when the graph of the data shows a decent straight line and the result graph also shows a straight line.
+
+Task 7: Dash Board.
+The dash board helps to present data better and easy to understand. We mainly use line graph and pie graph to show the trend of the data.
+
+Outcomes:
+Their Implications: Statistical evaluation and pandas profiling gave a detailed overall quality of the data set such as missing value, occerenace and warnings about bad data. Monthly line graph help to recognize anomalies and trends in smaller scale.
+Correlation analysis and correlation matrix help to investigate the relationship between metrics.
+Hypothesis testing allows us to draw conclusions about an entire population based on a representative metrics.
+Estimator help to prevent biased sampling methods and the randomness inherent to drawing a sample from a population and help us to find out if the sample mean is the same as the population mean.
+FB prophet help to predict the future trend of each metric. Linear regression model help to predict storage used for a different amount of user.
+The dash board helps to present data better and easy to understand.
+
+
+Below is the github link for all my tasks for the project
+https://github.com/UNCG-CSE/G_Suite_Metrics/tree/master/src/Hieu
+
+
 
